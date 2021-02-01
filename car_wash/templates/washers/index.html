@@ -1,0 +1,44 @@
+{% extends "washers/layout.html" %}
+{##}
+{#{% block body %}#}
+{#    <h1>Washing data</h1>#}
+{#    <ul>#}
+{#        {% for order in orders %}#}
+{#            <li>Orders {{ order.id }}: {{ order.washer.last_name }} - {{ order.car.carModel }}#}
+{#                Order date: {{ order.order_date }} , End date: {{ order.end_date }} </li>#}
+{#        {% endfor %}#}
+{##}
+{#    </ul>#}
+{#{% endblock %}#}
+{% block body %}
+    <h1>Washing data</h1>
+    {% for order in orders %}
+         <ul class="collection">
+    <li class="collection-item avatar">
+      <span class="title">Washer: {{ order.washer.last_name }} {{ order.washer.first_name }}</span>
+      <p>Car: {{ order.car.carType }} {{ order.car.carModel }}<br>
+         Order date: {{ order.order_date }} , End date: {{ order.end_date }} <br>
+          Price: {{ order.price }} GEL.  Washer percent: {{ order.washer.percent }} %
+      </p>
+
+        #done or not
+      <a class="secondary-content">
+                    <div class="preloader-wrapper small active">
+    <div class="spinner-layer spinner-green-only">
+      <div class="circle-clipper left">
+        <div class="circle"></div>
+      </div><div class="gap-patch">
+        <div class="circle"></div>
+      </div><div class="circle-clipper right">
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+      </a>
+    </li>
+  </ul>
+
+    {% endfor %}
+{% endblock %}
+
