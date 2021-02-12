@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <title>Washers</title>
+    </head>
+    <body>
+        <nav>
+        <div class="nav-wrapper">
+          <a class="brand-logo">Car Washer</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'cars' %}">Cars</a></li>
+
+          </ul>
+        </div>
+      </nav>
+    </body>
+
+    <body>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>
+
