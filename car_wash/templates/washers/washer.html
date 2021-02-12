@@ -1,4 +1,4 @@
-{% extends "washers/layout.html" %}
+{% extends "washers/home.html" %}
 {##}
 {#{% block body %}#}
 {#    <h1>Washing data</h1>#}
@@ -11,7 +11,7 @@
 {#    </ul>#}
 {#{% endblock %}#}
 {% block body %}
-    <h1>Washing data</h1>
+
     {% for order in orders %}
          <ul class="collection">
     <li class="collection-item avatar">
@@ -20,22 +20,21 @@
          Order date: {{ order.order_date }} , End date: {{ order.end_date }} <br>
           Price: {{ order.price }} GEL.  Washer percent: {{ order.washer.percent }} %
       </p>
+        <a href="#!" class="secondary-content"><i class="material-icons">description</i></a>
+{#        done or not#}
+{#      <a class="secondary-content">#}
+{#                    <div class="preloader-wrapper small active">#}
+{#    <div class="spinner-layer spinner-green-only">#}
+{#      <div class="circle-clipper left">#}
+{#        <div class="circle"></div>#}
+{#      </div><div class="gap-patch">#}
+{#        <div class="circle"></div>#}
+{#      </div><div class="circle-clipper right">#}
+{#        <div class="circle"></div>#}
+{#      </div>#}
+{#    </div>#}
+{#  </div>#}
 
-        #done or not
-      <a class="secondary-content">
-                    <div class="preloader-wrapper small active">
-    <div class="spinner-layer spinner-green-only">
-      <div class="circle-clipper left">
-        <div class="circle"></div>
-      </div><div class="gap-patch">
-        <div class="circle"></div>
-      </div><div class="circle-clipper right">
-        <div class="circle"></div>
-      </div>
-    </div>
-  </div>
-
-      </a>
     </li>
   </ul>
 
